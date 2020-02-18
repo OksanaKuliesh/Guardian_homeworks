@@ -7,7 +7,7 @@ console.log(marks);
 
 //1
 const getPairs = (arr) => {
-    let studentsPairs = [
+    const studentsPairs = [
         [arr[0], arr[3]],
         [arr[1], arr[5]],
         [arr[4], arr[2]]
@@ -20,7 +20,7 @@ console.log(pairs);
 
 //2
 const getPairTheme = (arr1, arr2) => {
-    let pairTheme = [
+    const pairTheme = [
         [arr1[0], arr2[0]],
         [arr1[1], arr2[1]],
         [arr1[2], arr2[2]]
@@ -33,7 +33,7 @@ console.log(pairsThems);
 
 //3
 const getStudentsMarksArr = (arr1, arr2) => {
-    let studentsMarks = [];
+    const studentsMarks = [];
     for (let i = 0; i < arr1.length; i++) {
         studentsMarks.push([arr1[i], arr2[i]]);
     }
@@ -45,7 +45,7 @@ console.log(studentsMarksArr);
 
 //4.1
 const getRandomMark = (arr) => {
-    let randMarksArr = [];
+    const randMarksArr = [];
     for (let i = 0; i < arr.length; i++) {
         let randMark = arr[Math.floor(Math.random() * (arr.length))];
         randMarksArr.push(randMark);
@@ -58,7 +58,7 @@ console.log(randomMark);
 
 //4.2
 const getPairsThemeMarks = (pairsThems) => {
-    let pairThemeMark = [];
+    const pairThemeMark = [];
     for (let i = 0; i < pairsThems.length; i++) {
         pairThemeMark[i] = ([...pairsThems[i], randomMark[i]]);
     }
