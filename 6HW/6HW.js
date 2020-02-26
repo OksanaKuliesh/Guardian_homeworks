@@ -37,24 +37,31 @@ console.log(getStudentsSubjects(students[1]));
 const getAverageMark = (element) => {
     const marksArr = Object.values(element['subjects']).flat();
     const averageMark = marksArr.reduce((acc, curEl) => acc + curEl, 0) / marksArr.length;
-    return averageMark.toFixed(2);
+    return +averageMark.toFixed(2);
 };
 console.log(getAverageMark(students[1]));
 
 
 //3
 const getStudentsInfo = (element) => {
-    const studentsInfo = Object.assign({}, element);
-    delete studentsInfo.subjects;
-    studentsInfo['average mark'] = (getAverageMark(element));
-    return studentsInfo;
+    const {
+        course,
+        name
+    } = element;
+    return {
+        course,
+        name,
+        averageMark: getAverageMark(element)
+    };
 };
 console.log(getStudentsInfo(students[1]));
 
 
 //4
 const getStudentsNames = (obj) => {
-    const studentsNames = [obj[0].name, obj[1].name, obj[2].name];
+    const studentsNames = obj.map(function (element) {
+        return element.name
+    });
     return studentsNames.sort();
 };
 console.log(getStudentsNames(students));
