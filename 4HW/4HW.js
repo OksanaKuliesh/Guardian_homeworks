@@ -19,16 +19,16 @@ console.log(pairs);
 
 
 //2
-const getPairTheme = (arr1, arr2) => {
-    const pairTheme = [
-        [arr1[0], arr2[0]],
-        [arr1[1], arr2[1]],
-        [arr1[2], arr2[2]]
-    ];
+function getPairTheme(pairs, themes) {
+    const pairTheme = [];
+    for (let i = 0; i < pairs.length; i++) {
+        pairTheme.push([pairs[i].join(' и '), themes[i]]);
+    };
     return pairTheme;
 };
-const pairsThems = getPairTheme(pairs, themes);
-console.log(pairsThems);
+const pairsThemes = getPairTheme(pairs, themes)
+console.log(pairsThemes);
+
 
 
 //3
