@@ -30,8 +30,8 @@ console.log(getDividedByFive(1, 3, 4, 10, 23, 15, 55));
 
 
 //5
-const getAverage = (...numbers) => numbers.reduce((acc, curEl) => acc + ~~curEl, 0) / numbers.length;
-console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
+const getAverage = (...numbers) => Number((numbers.filter(number => Number.isInteger(number)).reduce((acc, curEl) => acc + curEl, 0) / numbers.length).toFixed(2));
+console.log(getAverage(6, 10, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
 
 //6
