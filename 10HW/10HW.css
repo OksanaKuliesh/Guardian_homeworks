@@ -1,0 +1,131 @@
+html {
+  font-size: 10px;
+  background: url(img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: red;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-shadow: 0 2px white, 0 3px #777;
+  text-align: center;
+}
+
+h2 {
+  text-align: right;
+  color: white;
+}
+
+#first-row {
+  display: flex;
+  flex: 1;
+  min-height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#second-row {
+  display: flex;
+  flex: 1;
+  min-height: 30vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#tractor {
+  background-image: url(img/tractor.jpg);
+  background-size: cover;
+}
+
+#helicopter {
+  background-image: url(img/helicopter.jpg);
+  background-size: cover;
+}
+
+#policecar {
+  background-image: url(img/policecar.jpg);
+  background-size: cover;
+}
+
+#firetruck {
+  background-image: url(img/firetruck.jpg);
+  background-size: cover;
+}
+
+#yacht {
+  background-image: url(img/yacht.jpg);
+  background-size: cover;
+}
+
+#train {
+  background-image: url(img/train.jpg);
+  background-size: cover;
+}
+
+#plain {
+  background-image: url(img/plain.jpg);
+  background-size: cover;
+}
+
+#car {
+  background-image: url(img/car.jpg);
+  background-size: cover;
+}
+
+.key {
+  height: 200px;
+  width: 200px;
+  border: .4rem solid green;
+  border-radius: .9rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  color: green;
+  text-shadow: 0 0 .5rem white;
+}
+
+.image {
+  border-radius: .9rem;
+}
+
+.active {
+  border-color: #ffc668;
+  -ms-transform: scale(1.2));
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  box-shadow: 0 0 10px #ffc668;
+}
+
+kbd {
+  display: block;
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: rgb(71, 18, 71);
+  text-shadow: 0 2px white, 0 2px #777;
+}
+
+@media (max-width: 760px) {
+  #first-row {
+    flex-direction: column;
+  }
+
+  #second-row {
+    flex-direction: column;
+  }
+}
